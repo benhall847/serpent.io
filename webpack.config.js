@@ -14,7 +14,13 @@ module.exports = {
     },
     resolve: {
         extensions: ["*", ".js", ".jsx"],
-        modules: [path.resolve("./src"), path.resolve("./node_modules")]
+        modules: [
+            path.resolve("./src"),
+            path.resolve("./src/components"),
+            path.resolve("./src/core"),
+            path.resolve("./globalContext"),
+            path.resolve("./node_modules")
+        ]
     },
     output: {
         path: __dirname + "/dist",

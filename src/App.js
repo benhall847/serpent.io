@@ -1,8 +1,7 @@
 import React from "react";
-import People from "components/People/index";
-
+import Snake from "Snake";
 const App = () => {
-    return <People></People>;
+    return <Snake></Snake>;
 };
 
 export default App;

@@ -1,3 +1,6 @@
-export const SET_FIRST_NAME = "SET_FIRST_NAME";
-export const INCREMENT_NUMBER = "INCREMENT_NUMBER";
-export const DECREMENT_NUMBER = "DECREMENT_NUMBER";
+export const MOVE_SNAKE = "MOVE_SNAKE";
+export const UP = "UP";
+export const DOWN = "DOWN";
+export const LEFT = "LEFT";
+export const RIGHT = "RIGHT";
+export const SET_DIRECTION = "SET_DIRECTION";
