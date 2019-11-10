@@ -3,7 +3,8 @@
 This simple boilerplate app adds a quick modification to the minimal-react-webpack-babel-setup
 
 The webpack config is setup to allow es6 imports without relative paths.
-This is useful for example, for exporting & importing a globalContext / State in React.
+
+This is useful for example, while exporting & importing a globalContext / State in React.
 
 read more here : [Es6 Import Statement Without Relative Paths Using Webpack](https://moduscreate.com/blog/es6-es2015-import-no-relative-path-webpack/?fbclid=IwAR0MbuuBHh57NSOY3QLqwZ_SlO9ZbgJ9GXR_YXQnyMDozCbm0YnBmacpaOM)
 
