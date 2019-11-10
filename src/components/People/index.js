@@ -12,8 +12,6 @@ const People = () => {
     );
     const { board } = snakeState;
 
-    snakeDispatch(CONSTANT);
-
     return (
         <>
             {people.map((person, indx) => {
