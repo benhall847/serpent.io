@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "App";
-import Provider from "core/Provider/index";
+import UserProvider from "core/UserProvider/Provider/index";
+import SnakeProvider from "core/SnakeProvider/Provider/index";
 
 ReactDOM.render(
-    <Provider>
-        <App />
-    </Provider>,
+    <SnakeProvider>
+        <UserProvider>
+            <App />
+        </UserProvider>
+    </SnakeProvider>,
     document.getElementById("app")
 );
 

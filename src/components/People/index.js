@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import Person from "components/Person/index";
-import globalContext from "globalContext";
+import UserContext from "core/UserContext";
+import SnakeContext from "core/SnakeContext";
 
 const People = () => {
-    const { state } = React.useContext(globalContext);
-    const { people } = state;
+    const { userState } = useContext(UserContext);
+    const { people } = userState;
+
+    const { snakeState, snakeDispatch, snakeConstants } = useContext(
+        SnakeContext
+    );
+    const { board } = snakeState;
+
+    snakeDispatch(CONSTANT);
 
     return (
         <>
             {people.map((person, indx) => {
                 return (
-                    <Person
-                        name={person.name}
-                        key={indx}
-                        number={person.number}
-                    />
+                    <div key={indx}>
+                        <Person name={person.name} number={person.number} />
+                        {board.map((eaString, i) => (
+                            <span key={i}>{eaString}</span>
+                        ))}
+                    </div>
                 );
             })}
         </>

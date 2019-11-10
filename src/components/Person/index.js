@@ -1,17 +1,17 @@
 import React from "react";
-import globalContext from "globalContext";
+import UserContext from "core/UserContext";
 
 const Person = ({ name, number }) => {
     const {
-        dispatch,
-        constants: { INCREMENT_NUMBER }
-    } = React.useContext(globalContext);
+        userDispatch,
+        userConstants: { INCREMENT_NUMBER }
+    } = React.useContext(UserContext);
     return (
         <>
             {`my name is ${name} my number is ${number}`}
             <button
                 onClick={() => {
-                    dispatch(INCREMENT_NUMBER, name);
+                    userDispatch(INCREMENT_NUMBER, name);
                 }}
             >
                 Click me to increment!!
