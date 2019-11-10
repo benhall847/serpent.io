@@ -1,6 +1,17 @@
-# minimal-react-webpack-babel-setup
+# react-app-webpack-babel
 
-[![Build Status](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup.svg?branch=master)](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/minimal-react-webpack-babel-setup.svg)](https://greenkeeper.io/)
+This simple boilerplate app adds a quick modification to the minimal-react-webpack-babel-setup
+
+The webpack config is setup to allow es6 imports without relative paths.
+This is useful for example, for exporting & importing a globalContext / State in React.
+
+read more here : [Es6 Import Statement Without Relative Paths Using Webpack](https://moduscreate.com/blog/es6-es2015-import-no-relative-path-webpack/?fbclid=IwAR0MbuuBHh57NSOY3QLqwZ_SlO9ZbgJ9GXR_YXQnyMDozCbm0YnBmacpaOM)
+
+
+## Below is the from the original README before modifying the webpack.
+
+
+# minimal-react-webpack-babel-setup
 
 Read how to set it up yourself: [React with Webpack Tutorial](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/).
 
