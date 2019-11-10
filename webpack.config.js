@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const path = require("path");
+const path = require("path"); //research where did this comes from... we did NOT npm install this.
 
 module.exports = {
     entry: "./src/index.js",

@@ -1,2 +1,2 @@
-const globalContext = " WHATTUPPPP";
-export default globalContext;
+import { GlobalContext } from "core/Provider/index";
+export default GlobalContext;
