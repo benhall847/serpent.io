@@ -1,4 +1,4 @@
-import { MOVE_SNAKE, UP, DOWN, LEFT, RIGHT, SET_DIRECTION, SET_CLICK_COUNTER } from './constants';
+import { MOVE_SNAKE, UP, DOWN, LEFT, RIGHT, SET_DIRECTION } from './constants';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -51,7 +51,6 @@ const reducer = (state, action) => {
                 },
             };
         case SET_DIRECTION:
-            const { clickCounter } = state;
             const { lastDirection } = state.snake;
             const { payload } = action;
             if (
