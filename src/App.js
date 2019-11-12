@@ -1,7 +1,11 @@
-import React from "react";
-import Snake from "Snake";
+import React from 'react';
+import Snake from 'Snake';
 const App = () => {
-    return <Snake></Snake>;
+    return (
+        <>
+            <Snake />
+        </>
+    );
 };
 
 export default App;

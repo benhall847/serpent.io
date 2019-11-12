@@ -1,26 +1,25 @@
 export const snake = {
-    direction: "UP",
-    lastDirection: "UP",
+    direction: 'UP',
+    lastDirection: 'UP',
     location: [
         {
             column: 10,
-            row: 14
+            row: 14,
         },
         {
             column: 10,
-            row: 15
+            row: 15,
         },
         {
             column: 10,
-            row: 16
-        }
-    ]
+            row: 16,
+        },
+    ],
 };
 
 export const createBoard = () => {
     const boardHeight = 30;
     const boardWidth = 20;
-
     let board = [];
     for (let y = 0; y < boardHeight; y++) {
         let row = [];
@@ -28,7 +27,7 @@ export const createBoard = () => {
             const { location } = snake;
             const result = false;
 
-            location.forEach(locator => {
+            location.forEach((locator) => {
                 if (locator.column === x && locator.row === y) {
                     result = true;
                 }

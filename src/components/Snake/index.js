@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import Board from "Board";
-import UserContext from "UserContext";
-import styled from "styled-components";
-import SnakeContext from "SnakeContext";
+import React, { useEffect } from 'react';
+import Board from 'Board';
+import UserContext from 'UserContext';
+import styled from 'styled-components';
+import SnakeContext from 'SnakeContext';
 
 const SnakeWrapper = styled.div`
-    width: 100vw;
+    width: 98vw;
     height: 80vh;
 `;
 
@@ -18,24 +18,27 @@ const BoardWrapper = styled.div`
     background-color: black;
 `;
 
-const keyPressHandler = (
-    { key },
-    snakeDispatch,
-    { SET_DIRECTION, LEFT, RIGHT, UP, DOWN }
-) => {
-    console.log(SET_DIRECTION);
+const keyPressHandler = ({ key, repeat }, snakeDispatch, { SET_DIRECTION, LEFT, RIGHT, UP, DOWN }) => {
     switch (key) {
-        case "ArrowLeft":
-            snakeDispatch(SET_DIRECTION, LEFT);
+        case 'ArrowLeft':
+            if (repeat != true) {
+                snakeDispatch(SET_DIRECTION, LEFT);
+            }
             break;
-        case "ArrowRight":
-            snakeDispatch(SET_DIRECTION, RIGHT);
+        case 'ArrowRight':
+            if (repeat != true) {
+                snakeDispatch(SET_DIRECTION, RIGHT);
+            }
             break;
-        case "ArrowUp":
-            snakeDispatch(SET_DIRECTION, UP);
+        case 'ArrowUp':
+            if (repeat != true) {
+                snakeDispatch(SET_DIRECTION, UP);
+            }
             break;
-        case "ArrowDown":
-            snakeDispatch(SET_DIRECTION, DOWN);
+        case 'ArrowDown':
+            if (repeat != true) {
+                snakeDispatch(SET_DIRECTION, DOWN);
+            }
             break;
         default:
             break;
@@ -55,7 +58,7 @@ const Snake = () => {
     };
 
     useEffect(() => {
-        window.addEventListener("keydown", e => {
+        window.addEventListener('keydown', (e) => {
             keyPressHandler(e, snakeDispatch, snakeConstants);
         });
         gameLoop();

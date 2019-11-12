@@ -1,7 +1,7 @@
-import { createBoard, snake } from "logic";
+import { createBoard, snake } from 'logic';
 const initialState = {
     board: createBoard(),
-    snake
+    snake,
 };
 export default initialState;
 
